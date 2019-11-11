@@ -3,10 +3,10 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
 
-const users = require("./routes/api/users");
-const stock = require("./routes/api/stock");
-const billing = require("./routes/api/billing");
-//const illing = require("./routes/api/illing");
+const users = require("./routes/users");
+const stock = require("./routes/stock");
+const billing = require("./routes/billing");
+
 
 const app = express();
 
@@ -14,7 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // DB Config
-const db = require("./config/webconfig").mongoURI;
+const db = require("./config/config").mongoURI;
 
 // Connect to Mongo
 mongoose
@@ -25,10 +25,9 @@ mongoose
 const port = process.env.PORT || 5000;
 
 // Use Routes
-app.use("/api/users", users);
-app.use("/api/stock", stock);
-app.use("/api/billing", billing);
-//app.use("/api/illing", illing);
+app.use("/", users);
+app.use("/stock", stock);
+app.use("/billing", billing);
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {

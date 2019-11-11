@@ -3,7 +3,6 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
 
@@ -19,47 +18,5 @@
 }
 
 .App-link {
-  color: #61dafb;
-}
-
-.HomePage {
-  background-color: dodgerblue;
-  width: 100%;
-  height: 800px;
-}
-
-.ShoppingList {
-  background-color: chartreuse;
-  width: 100%;
-  height: 800px;
-}
-.ShoppingColumns {
-  margin-right: 0.5rem;
-}
-
-.Cart {
-  background-color: skyblue;
-  width: 100%;
-  height: 800px;
-}
-
-.SignIn {
-  background-color: chartreuse;
-  width: 100%;
-  height: 800px;
-}
-
-.SignUp {
-  background-color: yellow;
-  width: 100%;
-  height: 800px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #09d3ac;
 }
