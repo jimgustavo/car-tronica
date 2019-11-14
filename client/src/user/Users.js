@@ -16,14 +16,15 @@ class Users extends Component {
     })
   }
   render() {
+    console.log(this.state.users);
     return (
       <div>
         <h3>All Users</h3>
-        <ul dense>
-         {this.state.users.map((item, i) => {
-          return <li to={"/user/" + item._id} key={i}>
+        <ul>
+         {this.state.users.map((item) => {
+          return <li>
                     <button>
-                      <li primary={item.name}/>
+                      <li>{item.name}</li>
                     </button>
                  </li>
                })

@@ -33,7 +33,7 @@ class Signup extends Component {
     return (
       <div className="SignUp">
       <h2> Bienvenido a CarStore, registrate porfavor: </h2>
-      <form onSubmit={this.handleSubmit}>
+      <form>
         <br />
         <input
           className="username"

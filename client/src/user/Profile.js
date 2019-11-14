@@ -44,14 +44,14 @@ class Profile extends Component {
         <ul>
           <li>
             <div primary={this.state.user.name} secondary={this.state.user.email}/> {
-             auth.isAuthenticated().user && auth.isAuthenticated().user._id == this.state.user._id && 
+             auth.isAuthenticated().user && auth.isAuthenticated().user._id === this.state.user._id && 
               (<div>
-                <link to={"/user/edit/" + this.state.user._id}>
+                <Link to={"/user/edit/" + this.state.user._id}>
                   <button aria-label="Edit" color="primary">
                      Editar
                   </button>
-                </link>
-                <h5 userId={this.state.user._id}/>
+                </Link>
+                <p userId={this.state.user._id}/>
               </div>)
             }
           </li>

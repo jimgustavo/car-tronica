@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import auth from './../auth/auth-helper'
 import {Redirect} from 'react-router-dom'
 import {signin} from './api-auth.js'
+import {Link} from 'react-router-dom'
 
 class Signin extends Component {
   state = {
@@ -33,7 +34,6 @@ class Signin extends Component {
   }
 
   render() {
-    const { email, password } = this.state;
     const {from} = this.props.location.state || {
       from: {
         pathname: '/'
@@ -71,6 +71,9 @@ class Signin extends Component {
           <br />
           <button className="buttonLogIn" onClick={this.clickSubmit}>Ingresar</button>
         </form>
+        <Link to="/signup">  
+              Registrarme
+        </Link>
       </div>
     )
   }

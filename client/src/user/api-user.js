@@ -1,5 +1,5 @@
 const create = (user) => {
-    return fetch('/api/users/', {
+    return fetch('/api/users', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
